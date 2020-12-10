@@ -1,0 +1,22 @@
+
+kind: pipeline
+name: default
+steps:
+- name: build
+  image: node:12
+  commands:
+  - npm install
+  - npm test
+  - npm run build
+- name: npm
+  image: plugins/npm
+  settings:
+    registry: 'https://registry.npmjs.org/'
+    token:
+      from_secret: npm_token
+  when:
+    event: tag
+---
+kind: secret
+name: npm_token
+data: I6TkE24YklA2SBThd8HDY4pGFrbbocRl6VhJApUEil0a6cOv/JtJsLwz0KVQCMh9ngEr3XfWROSk0QKjeQqE4Q==
