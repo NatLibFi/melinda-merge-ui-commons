@@ -1,3 +1,4 @@
+---
 
 kind: pipeline
 name: default
@@ -20,3 +21,8 @@ steps:
 kind: secret
 name: npm_token
 data: I6TkE24YklA2SBThd8HDY4pGFrbbocRl6VhJApUEil0a6cOv/JtJsLwz0KVQCMh9ngEr3XfWROSk0QKjeQqE4Q==
+---
+kind: signature
+hmac: 85c6ffb0ab7cad050bed23f4fdc296503587a019d09600aff894cbf5f29b7cde
+
+...
