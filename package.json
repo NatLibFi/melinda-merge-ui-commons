@@ -1,6 +1,6 @@
 {
   "name": "@natlibfi/melinda-merge-ui-commons",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "Common modules for Melinda Merge UI application",
   "keywords": [
     "MARC",
