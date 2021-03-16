@@ -93,7 +93,7 @@ export function updateAndReloadRecord(client, recordId, record) {
 
     const recordIdFromUpdate = updateResponse.recordId;
 
-    return loadRecord(client, recordIdFromUpdate, { include_parent: 1}).then(record => {
+    return loadRecord(client, recordIdFromUpdate, { include_parent: 1, include_nonmono: 1}).then(record => {
       return record;
     }).catch(error => {
       logger.log('info', `Error loading record ${recordId}`, error);
