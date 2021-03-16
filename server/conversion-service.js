@@ -28,7 +28,7 @@
 import { readEnvironmentVariable } from './utils';
 import { logger } from './logger';
 import uuid from 'node-uuid';
-import { ISO2709 } from 'marc-record-serializers';
+import { ISO2709 } from '@natlibfi/marc-record-serializers';
 import fs from 'fs-extra';
 import path from 'path';
 import { exec } from 'child_process';
