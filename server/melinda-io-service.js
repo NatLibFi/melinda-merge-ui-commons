@@ -119,7 +119,7 @@ export function createAndReloadRecord(client, record) {
 
     logger.log('info', `Record created, id: ${recordId}`, updateResponse.messages);
 
-    return loadRecord(client, recordId, { include_parent: 1}).then(result => {
+    return loadRecord(client, recordId, { include_parent: 1, include_nonmono: 1}).then(result => {
       return _.assign({}, result, { recordId });
       
     }).catch(error => {

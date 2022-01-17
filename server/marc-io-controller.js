@@ -62,7 +62,7 @@ marcIOController.get('/:id', cors(corsOptions), (req, res) => {
   const client = new MelindaClient(defaultConfig);
 
   logger.log('info', `Loading record ${req.params.id}`);
-  loadRecord(client, req.params.id, {handle_deleted: 1, include_parent: 1}).then(record => {
+  loadRecord(client, req.params.id, {handle_deleted: 1, include_parent: 1, include_nonmono: 1}).then(record => {
     logger.log('info', `Record ${req.params.id} loaded succesfully`);
     res.send(record);
   }).catch(error => {
